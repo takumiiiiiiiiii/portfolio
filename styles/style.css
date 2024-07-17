@@ -1,3 +1,18 @@
-p{
-    font-size: 100px;
-}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    
+  }
+  
+  @media (min-width: 768px) {
+   
+  }
+  :root {
+    --main-color: #FFD610;
+    --sub-color:#D7F4FC;
+    --char-color:#242424;
+    --gray-bg:#E8E8E8;
+  }
+  
