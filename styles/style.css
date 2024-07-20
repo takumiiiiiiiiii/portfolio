@@ -117,26 +117,79 @@
 .skills-item{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    justify-content: center;
     margin: 30px 25px;
     background-color: var(--main-blue);
     border-radius: 80px;
+    gap: 30px;
+    padding: 10px 10px;
 }
 .skills-contents{
+    flex-direction: column;
     margin: 10px 10%;
 }
 .skills-img{
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    width: 100px;
+    
+}
+.skills-img img{
+    min-width: 50%;
+    width: 40%;
+    object-fit: contain;
 }
 .skills-contents{
     width: 80%;
 }
-.skills-{
+.skills-contents p{
+    margin-top: 10px;
+    text-align: center;
+}
 
+/*コンテンツ*/
+
+.contents{
+    padding: 30px 30px;
+}
+.contents-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 25px;
+    border-radius: 80px;
+    gap: 30px;
+    padding: 30px 30px;
+}
+.contents-contents{
+    padding: 30px 30px;
+}
+.contents-contents::before{
+    z-index: -1;
+    position: absolute;
+    content: "";
+    background-color: var(--main-blue);
+    height: 100%;
+    width: 1000%;
+    left: 0px;
+    top: 0px;
+    border-radius: 80px;
+}
+.contents-movie{
+    display: flex;
+    justify-content: center;
+}
+.contents-movie iframe{
+    min-width: 50%;
+    width: 50%;
+    min-height: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+.skills-img img{
+    min-width: 50%;
+    width: 40%;
+    object-fit: contain;
 }
   @media (min-width: 768px) {
    
