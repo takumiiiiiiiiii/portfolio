@@ -5,27 +5,148 @@
     max-width: 100%;
     
   }
+  body{
+
+    background-color: var(--sub-blue);
+  }
   .gnav{
     display: none;
   }
+
+/*ポートフォリオ*/
+
   .hero{
     position: relative;
-    height: 1000px;
+    height: 800px;
+  }
+  .hero-text{
+    z-index: 2;
+    position: absolute;
+    display: inline-block;
+    height: 100px;
+    width: 80%;
+    right: 0px;
+    top: 43%;
+    background-color: var(--main-pink);
+    color: var(--char-white);
+    padding: 20px 40px;
+    box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.4);
   }
   .hero::before{
+    z-index: 1;
     position:absolute;
     content: "";
     background-color: var(--main-blue);
-    width:30%;
-    height: 30%;
+    width:70%;
+    height: 50%;
   }
+  .hero::after{
+    z-index: 0;
+    position:absolute;
+    content: "";
+    background-color: var(--sub-pink);
+    width:100%;
+    height: 30%;
+    right: 0px;
+    top:50%
+  }
+
+/*自己紹介*/
+
+  .selfintro{
+    height: 800px;
+  }
+  .selfintro-contents{
+    padding: 30px 30px;
+  }
+  .section-name{
+    position: relative;
+    display: inline-block;
+    font-size: 2em;
+  }
+  .section-name::after {
+    position: absolute;
+    content: "";
+    bottom: -5px;
+    right: 0;
+    left: -650px;
+    margin: 0 auto;
+    width: 800px;
+    border-bottom: 10px solid var(--main-pink);
+}
+.selfintro-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--sub-pink);
+    height: 520px;
+    margin: 30px 25px;
+    border-radius: 80px;
+}
+.selfintro-item::before{
+    z-index: -1;
+    position: absolute;
+    content: "";
+    background-color: var(--main-pink);
+    height: 520px;
+    top: 50px;
+    left: -50px;
+    width: 100%;
+    border-radius: 80px;
+}
+.selfintro-text{
+    margin: 10px 10%;
+    line-height: 30px;
+}
+.selfintro-text h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/*スキル*/
+
+.skills{
+    padding: 30px 30px;
+}
+.skills .section-name::after {
+    left: -680px;
+}
+.skills-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 30px 25px;
+    background-color: var(--main-blue);
+    border-radius: 80px;
+}
+.skills-contents{
+    margin: 10px 10%;
+}
+.skills-img{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100px;
+}
+.skills-contents{
+    width: 80%;
+}
+.skills-{
+
+}
   @media (min-width: 768px) {
    
   }
   :root {
     --main-blue: #B4E1FC;
     --sub-blue:#D7F0FD;
-    --char-color:#242424;
-    --gray-bg:#E8E8E8;
+    --main-pink:#F6C7E1;
+    --sub-pink:#FAE4F0;
+    --char-white:#FDFDFD;
+    --char-black:#4C4C4C;
   }
   
