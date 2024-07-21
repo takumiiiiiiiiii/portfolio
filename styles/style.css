@@ -6,8 +6,9 @@
     
   }
   body{
-
     background-color: var(--sub-blue);
+    color: var(--char-black);
+    overflow-x: hidden;
   }
   .gnav{
     display: none;
@@ -63,6 +64,7 @@
     position: relative;
     display: inline-block;
     font-size: 2em;
+    
   }
   .section-name::after {
     position: absolute;
@@ -99,7 +101,7 @@
 }
 .selfintro-text{
     margin: 10px 10%;
-    line-height: 30px;
+    
 }
 .selfintro-text h2{
     text-align: center;
@@ -131,7 +133,6 @@
 .skills-img{
     display: flex;
     justify-content: center;
-    
 }
 .skills-img img{
     min-width: 50%;
@@ -158,32 +159,64 @@
     justify-content: center;
     margin: 30px 25px;
     border-radius: 80px;
-    gap: 30px;
     padding: 30px 30px;
 }
 .contents-contents{
-    padding: 30px 30px;
+    position: relative;
+    padding: 30px 0px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
 }
-.contents-contents::before{
+.contents-contents:nth-child(n+1){
+    top: -20px;
+}
+.contents-contents:nth-child(2n-1):before{
     z-index: -1;
     position: absolute;
     content: "";
     background-color: var(--main-blue);
     height: 100%;
     width: 1000%;
-    left: 0px;
+    right: -50px;
+    top: 30px;
+    border-radius: 80px;
+}
+.contents-contents:nth-child(3n):before{
+    z-index: -100;
+    top: -30px;
+}
+.contents-contents:nth-child(2n):before{
+    overflow:hidden;
+    z-index: -1;
+    position: absolute;
+    content: "";
+    background-color: var(--sub-pink);
+    height: 100%;
+    width: 150%;
+    left: -50px;
     top: 0px;
     border-radius: 80px;
 }
+.contents-contents:nth-child(3):before{
+    height: 105%;
+}
+.contents-contents:nth-child(2){
+   text-align: left;
+}
+
+.contents-name{
+    margin: 20px 0;
+    font-size: 20px;
+}
 .contents-movie{
     display: flex;
-    justify-content: center;
 }
 .contents-movie iframe{
     min-width: 50%;
-    width: 50%;
+    width: 100%;
     min-height: 100%;
-    height: 300px;
+    height: 300px; 
     object-fit: contain;
 }
 .skills-img img{
@@ -191,6 +224,10 @@
     width: 40%;
     object-fit: contain;
 }
+
+/**/
+
+
   @media (min-width: 768px) {
    
   }
@@ -200,6 +237,6 @@
     --main-pink:#F6C7E1;
     --sub-pink:#FAE4F0;
     --char-white:#FDFDFD;
-    --char-black:#4C4C4C;
+    --char-black:#1d1d1d;
   }
   
