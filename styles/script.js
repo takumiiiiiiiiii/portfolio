@@ -21,13 +21,24 @@ window.onload = function(){
 var item1=true;
 var item2=true;
 var item3=true;
+var item4=true;
 $(window).scroll(function(){
   
+        var top = $("#Selfintro").offset().top; // ターゲットの位置取得
+        var position = top - $(window).height();  // 発火させたい位置
+        if($(window).scrollTop() > position&&item4==true){
+        // 要素が見えたときの動き 
+        console.log("fafafa")
+        $(".selfintro-before").css({ 'left' : '-50px','top' : '50px'  } );
+        item4=false;
+        }else{
+        // それ以外の動き
+        }
+
         var top = $("#contents1").offset().top; // ターゲットの位置取得
         var position = top - $(window).height();  // 発火させたい位置
         if($(window).scrollTop() > position&&item1==true){
           // 要素が見えたときの動き 
-          console.log("fafafa")
           $("#contents1").css({ 'left' : '0px'  } );
           item1=false;
         }else{
@@ -38,7 +49,6 @@ $(window).scroll(function(){
         var position = top - $(window).height();  // 発火させたい位置
         if($(window).scrollTop() > position&&item2==true){
           // 要素が見えたときの動き 
-          console.log("fafafa")
           $("#contents2").css({ 'right' : '0px'} );
           item2=false;
         }else{
@@ -49,7 +59,6 @@ $(window).scroll(function(){
         var position = top - $(window).height();  // 発火させたい位置
         if($(window).scrollTop() > position&&item3==true){
           // 要素が見えたときの動き 
-          console.log("fafafa")
           $("#contents3").css({ 'left' : '0px'  } );
           item3=false;
         }else{
