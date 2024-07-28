@@ -161,8 +161,8 @@
     position: absolute;
     display: inline-block;
     height: 100px;
-    width: 0%;
-    right: 0px;
+    width: 70%;
+    right: -100%;
     top: 43%;
     background-color: var(--main-pink);
     color: var(--char-white);
@@ -312,7 +312,6 @@
 }
 .contents-contents:nth-child(2n){
     right: -200%;
-    
 }
 .contents-contents:nth-child(n+1){
     top: -20px;

@@ -16,9 +16,7 @@ window.onload = function(){
     var after = document.getElementById('After');
     after.style.width = '100%';
     // ヒーローテキストの移動
-    var text = document.getElementById('Herotext');
-    text.style.width = '70%';
-
+    $(".hero-text").css({ 'right' : '0%'  } );
     }
 var item1=true;
 var item2=true;
