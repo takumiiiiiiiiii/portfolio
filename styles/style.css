@@ -443,10 +443,10 @@ footer{
     }
 }
 :root {
-    --main-blue: #B4E1FC;
-    --sub-blue:#D7F0FD;
-    --main-pink:#F6C7E1;
-    --sub-pink:#FAE4F0;
+    --main-blue: #32acf8;
+    --sub-blue:#67c8fc;
+    --main-pink:#ffa1d5;
+    --sub-pink:#ffd3eb;
     --char-white:#FDFDFD;
     --char-black:#1d1d1d;
 }
