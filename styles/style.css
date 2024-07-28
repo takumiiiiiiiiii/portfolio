@@ -161,31 +161,34 @@
     position: absolute;
     display: inline-block;
     height: 100px;
-    width: 80%;
+    width: 0%;
     right: 0px;
     top: 43%;
     background-color: var(--main-pink);
     color: var(--char-white);
     padding: 20px 40px;
     box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.4);
+    transition: all 0.5s;
   }
-  .hero::before{
+  .herobefore{
     z-index: 1;
     position:absolute;
     content: "";
     background-color: var(--main-blue);
-    width:70%;
+    width:0%;
     height: 50%;
+    transition: all 0.5s;
   }
-  .hero::after{
+  .heroafter{
     z-index: 0;
     position:absolute;
     content: "";
     background-color: var(--sub-pink);
-    width:100%;
+    width:0%;
     height: 30%;
     right: 0px;
-    top:50%
+    top:50%;
+    transition: all 0.5s;
   }
 
 /*自己紹介*/
@@ -285,6 +288,7 @@
 
 .contents{
     padding: 100px 30px;
+    overflow-x: hidden;
 }
 .contents-item{
     position: relative;
@@ -301,6 +305,14 @@
     display: flex;
     gap: 30px;
     flex-direction: column;
+    transition: all 0.8s;
+}
+.contents-contents:nth-child(2n-1){
+    left: -200%;
+}
+.contents-contents:nth-child(2n){
+    right: -200%;
+    
 }
 .contents-contents:nth-child(n+1){
     top: -20px;
@@ -313,6 +325,7 @@
     height: 100%;
     width:calc(100vw - 35px);
     right: -50px;
+
     top: 30px;
     border-radius: 0 80px 80px 0;
 }
